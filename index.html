@@ -1,271 +1,475 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>iSchoola | Building Better Schools</title>
-  <meta name="description" content="iSchoola operates and empowers schools with systems: academics, quality, accreditation, and technology." />
+  <title>iSchoola | Future-Ready Schools & Education Systems</title>
+  <meta name="description" content="iSchoola builds and operates future-ready schools across Egypt and the Middle East — American Diploma, National curriculum, career tracks, SAT/ACT/EST, edtech, quality assurance, and accreditation." />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- Social -->
+  <meta property="og:title" content="iSchoola" />
+  <meta property="og:description" content="Future-ready schools powered by strong systems." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Top ribbon (optional, professional touch) -->
-  <div class="top-ribbon">
-    <div class="container ribbon-inner">
-      <span>Education Systems • School Operations • Accreditation Readiness</span>
-      <a class="ribbon-link" href="#contact">Talk to us</a>
-    </div>
-  </div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- Header -->
-  <header class="header">
+  <header class="site-header" role="banner">
     <div class="container header-inner">
       <a class="brand" href="#home" aria-label="iSchoola home">
-        <img src="assets/logo.png" alt="iSchoola logo" class="logo" />
+        <img class="brand-logo" src="assets/logo.png" alt="iSchoola logo" />
       </a>
 
-      <nav class="nav" aria-label="Primary">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="navMenu">
-          <span class="nav-toggle-lines" aria-hidden="true"></span>
-          <span class="sr-only">Open menu</span>
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+          <span aria-hidden="true" class="nav-toggle-lines"></span>
+          <span class="sr-only">Toggle menu</span>
         </button>
 
         <div id="navMenu" class="nav-menu">
           <a href="#about">About</a>
-          <a href="#services">Services</a>
           <a href="#schools">Schools</a>
-          <a href="#resources">Resources</a>
+          <a href="#model">Academic Model</a>
+          <a href="#initiatives">Initiatives</a>
+          <a href="#infrastructure">Infrastructure</a>
+          <a href="#why">Why iSchoola</a>
           <a class="btn btn-small" href="#contact">Contact</a>
         </div>
+
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <span class="icon" aria-hidden="true">◐</span>
+        </button>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <main id="home" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-      
-        <h1>We build and operate schools powered by strong systems.</h1>
-        <p class="lead">
-          iSchoola supports schools with academic planning, quality assurance, accreditation readiness,
-          and practical operational frameworks—so schools grow with confidence.
-        </p>
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="hero" aria-label="Hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="blob blob-a"></div>
+        <div class="blob blob-b"></div>
+        <div class="grid-sheen"></div>
+      </div>
 
-        <div class="hero-cta">
-          <a class="btn" href="#contact">Request a Proposal</a>
-          <a class="btn btn-ghost" href="#services">Explore Services</a>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="pill">
+            <span class="pill-dot" aria-hidden="true"></span>
+            Innovative • Trustworthy • Student-Centered
+          </p>
+
+          <h1 class="hero-title">
+            <span class="hero-title-static">Future-ready schools powered by</span>
+            <span class="kinetic" aria-live="polite">
+              <span class="kinetic-word" id="kineticWord">systems</span>
+            </span>
+          </h1>
+
+          <p class="hero-lead">
+            Founded in 2007, iSchoola operates, develops, and supports schools across Egypt and the Middle East.
+            We deliver rigorous academics, career pathways, and technology-enabled learning—grounded in local values and global standards.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#schools">Explore Our Schools</a>
+            <a class="btn btn-ghost" href="#contact">Request a Call</a>
+          </div>
+
+          <dl class="stats" aria-label="Key highlights">
+            <div class="stat">
+              <dt>Founded</dt>
+              <dd>2007</dd>
+            </div>
+            <div class="stat">
+              <dt>Programs</dt>
+              <dd>American + National</dd>
+            </div>
+            <div class="stat">
+              <dt>Focus</dt>
+              <dd>Career, Testing, QA</dd>
+            </div>
+          </dl>
+
+          <div class="ai-strip" role="region" aria-label="AI personalization preview">
+            <div class="ai-badge">AI-Ready</div>
+            <div class="ai-copy">
+              <strong>Personalized learning signals</strong>
+              <span class="muted">— dynamic content areas hinting at adaptive pathways, diagnostics, and support.</span>
+            </div>
+            <button id="aiShuffle" class="link-btn" type="button">Shuffle insights</button>
+          </div>
         </div>
 
-        <div class="trust">
-          <div class="trust-item">
-            <span class="trust-number">8+</span>
-            <span class="trust-label">Schools in Operation </span>
+        <!-- 3D floating subject icons -->
+        <aside class="hero-visual" aria-label="Highlights and subjects">
+          <div class="glass-card">
+            <h2 class="card-title">What iSchoola delivers</h2>
+            <ul class="check">
+              <li>Academic excellence with real-world readiness</li>
+              <li>Career-oriented high school tracks</li>
+              <li>SAT / ACT / EST preparation embedded in the journey</li>
+              <li>Quality assurance and accreditation readiness</li>
+              <li>EdTech and data systems that scale</li>
+            </ul>
           </div>
-          <div class="trust-item">
-            <span class="trust-number">Systems</span>
-            <span class="trust-label">Operations, Academics, QA</span>
+
+          <div class="float-stage" aria-hidden="true">
+            <div class="float-icon fi-1" title="STEM">∑</div>
+            <div class="float-icon fi-2" title="Coding">⌘</div>
+            <div class="float-icon fi-3" title="Design">✦</div>
+            <div class="float-icon fi-4" title="Business">◎</div>
           </div>
-          <div class="trust-item">
-            <span class="trust-number">Accreditation</span>
-            <span class="trust-label">Readiness & documentation</span>
+        </aside>
+      </div>
+
+      <svg class="divider" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,64 C160,110 320,10 480,48 C640,86 760,140 920,96 C1060,58 1120,14 1200,44 L1200,120 L0,120 Z"></path>
+      </svg>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>About iSchoola</h2>
+          <p class="muted">
+            Founded in 2007 under the name <strong>Cerebrom Business Solutions</strong>, iSchoola launched its first program in 2009
+            as a school and educational institution management system. Today, iSchoola expands across investment, operations,
+            and financing of schools—driven by a commitment to educational quality and future readiness.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Vision</h3>
+            <p>Schools as launchpads for lifelong success—leaders, thinkers, innovators.</p>
+          </article>
+          <article class="card">
+            <h3>Model</h3>
+            <p>Student-centered ecosystem: rigorous academics, projects, leadership, and family engagement.</p>
+          </article>
+          <article class="card">
+            <h3>Quality</h3>
+            <p>Research-based, adaptive, and aligned to modern educational trends—grounded in community needs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHOOLS -->
+    <section id="schools" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our Schools & Network</h2>
+          <p class="muted">A growing ecosystem of schools operated, managed, or supported by iSchoola.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel">
+            <h3>Egypt (Operated & Managed)</h3>
+            <ul class="list">
+              <li>New Generation Schools — Giza</li>
+              <li>Egypt Hills International Schools — Giza</li>
+              <li>Genius International Schools — Alexandria</li>
+              <li>Future Pioneers Schools — Fayoum</li>
+              <li>Cairo Hills International School — Giza <span class="tag">Under Construction</span></li>
+              <li>Alpha International Schools — Giza <span class="tag">Under Construction</span></li>
+              <li>Institutions serving Sudanese & Libyan communities in Egypt</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>Kuwait (Supported Schools)</h3>
+            <ul class="list">
+              <li>Middle East International School — Kuwait</li>
+              <li>American Gulf International School — Kuwait</li>
+              <li>Middle East International School for Special Needs — Kuwait</li>
+              <li>American Gulf International School for Special Needs — Kuwait</li>
+            </ul>
+
+            <div class="panel-callout">
+              <strong>Accreditation Partnership</strong>
+              <p class="muted">
+                iSchoola holds an exclusive partnership with <strong>Array Global</strong>, serving as the official representative
+                for Africa and the Middle East in American accreditation services.
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="hero-card" role="region" aria-label="Highlights">
-        <h2>What makes iSchoola different?</h2>
-        <ul class="checklist">
-          <li>School management built on clear processes and KPIs</li>
-          <li>Academic systems aligned to international standards</li>
-          <li>Accreditation evidence organized and audit-ready</li>
-          <li>Teacher development with real classroom impact</li>
-        </ul>
-        <div class="hero-card-footer">
-          <span class="hint">Want a 1-page profile?</span>
-          <a class="link" href="#contact">Ask for the company profile →</a>
+      <svg class="divider divider-flip" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,64 C160,110 320,10 480,48 C640,86 760,140 920,96 C1060,58 1120,14 1200,44 L1200,120 L0,120 Z"></path>
+      </svg>
+    </section>
+
+    <!-- ACADEMIC MODEL -->
+    <section id="model" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Educational Vision & Academic Model</h2>
+          <p class="muted">
+            A holistic learning experience: critical thinking, creativity, digital literacy, leadership, and global citizenship.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature">
+            <h3>American & National Programs</h3>
+            <p class="muted">
+              iSchoola offers both the American Diploma and the Egyptian National System—enhanced with modern teaching approaches,
+              bilingual elements, and technology-rich learning.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3>Career-Oriented High School Tracks</h3>
+            <p class="muted">
+              From Grade 10, students explore pathways (science, business, tech, design, healthcare, humanities) through
+              specialized courses, mentorship, projects, and real-world exposure.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3>SAT / ACT / EST Integration</h3>
+            <p class="muted">
+              Test readiness is embedded—not a last-minute add-on. Diagnostics, targeted support, strategies, and confidence building
+              are integrated into the learning journey.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3>Personalized Learning Paths</h3>
+            <p class="muted">
+              Data-informed diagnostics and mentorship support students at different paces—advanced learners, support needs,
+              and passion-project builders.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3>Educational Technology</h3>
+            <p class="muted">
+              LMS, digital libraries, simulation tools, and collaborative apps—strengthening performance, parent visibility,
+              and resilience across in-person or hybrid learning.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3>University & Career Counseling</h3>
+            <p class="muted">
+              Strategic guidance from Grade 9: counseling, workshops, fairs, scholarships, applications, interviews, and
+              parent partnership—supporting local and global university pathways.
+            </p>
+          </article>
+        </div>
+
+        <div class="dynamic-area" role="region" aria-label="Dynamic personalization area">
+          <div class="dynamic-left">
+            <h3>Personalization Preview</h3>
+            <p class="muted">A glimpse of what an AI-enabled iSchoola experience can feel like.</p>
+            <button id="recommendBtn" class="btn btn-small" type="button">Generate pathway idea</button>
+          </div>
+          <div class="dynamic-right">
+            <div class="recommendation" id="recommendationBox" tabindex="0" aria-live="polite">
+              <strong>Pathway idea:</strong>
+              <span class="muted">Click “Generate pathway idea” to see an example.</span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- INITIATIVES -->
+    <section id="initiatives" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Specialized Educational Initiatives</h2>
+          <p class="muted">Programs that enrich learning and prepare students for the future.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card card-pop">
+            <h3>Nabta</h3>
+            <p class="muted">
+              Coding & programming from Grade 3 through advanced levels—project-based learning, hackathons, robotics, and AI projects.
+            </p>
+          </article>
+
+          <article class="card card-pop">
+            <h3>Blink</h3>
+            <p class="muted">
+              Curriculum development and enrichment—aligned with international standards and 21st-century competencies.
+            </p>
+          </article>
+
+          <article class="card card-pop">
+            <h3>ISQA</h3>
+            <p class="muted">
+              iSchoola Quality Assurance—continuous improvement, coaching, evaluations, and accreditation readiness frameworks.
+            </p>
+          </article>
+
+          <article class="card card-pop">
+            <h3>Business Incubator</h3>
+            <p class="muted">
+              A flagship entrepreneurship program—ideation to MVP, pitching, mentorship, innovation labs, and real ecosystem exposure.
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <svg class="divider" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,64 C160,110 320,10 480,48 C640,86 760,140 920,96 C1060,58 1120,14 1200,44 L1200,120 L0,120 Z"></path>
+      </svg>
+    </section>
+
+    <!-- INFRASTRUCTURE -->
+    <section id="infrastructure" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Infrastructure Development & Strategic Partnerships</h2>
+          <p class="muted">
+            Future-ready campuses with smart classrooms, STEM labs, digital studios, safe outdoor spaces, high-speed connectivity,
+            eco-friendly design, and inclusive accessibility.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel">
+            <h3>Agyal Contracting Company</h3>
+            <p class="muted">
+              Premium educational facility experience—precision, sustainability, and modern requirements for health, safety, and learning.
+            </p>
+            <ul class="list">
+              <li>Ventilation & wellness design</li>
+              <li>Accessibility-first planning</li>
+              <li>Scalable campus deployment</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>SWAG Contracting Company</h3>
+            <p class="muted">
+              Smart school design and advanced engineering—flexible classrooms, collaborative spaces, and technology hubs.
+            </p>
+            <ul class="list">
+              <li>STEM labs & innovation zones</li>
+              <li>Green spaces for wellness</li>
+              <li>Modern, cost-effective build methods</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section id="why" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Why Choose iSchoola?</h2>
+          <p class="muted">A promise fulfilled every day—excellence, innovation, and measurable impact.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature">
+            <h3>Decades of practical experience</h3>
+            <p class="muted">Hands-on school establishment, operations, and improvement across diverse contexts.</p>
+          </article>
+          <article class="feature">
+            <h3>End-to-end solutions</h3>
+            <p class="muted">From infrastructure to curriculum, operations, technology, and continuous quality improvement.</p>
+          </article>
+          <article class="feature">
+            <h3>Accreditation alignment</h3>
+            <p class="muted">Global standards and documentation readiness—built into the operating model.</p>
+          </article>
+          <article class="feature">
+            <h3>Innovation culture</h3>
+            <p class="muted">Coding, entrepreneurship, AI-ready personalization, and tech-enhanced learning.</p>
+          </article>
+          <article class="feature">
+            <h3>Career & university readiness</h3>
+            <p class="muted">Track-based guidance, counseling, and pathways for local and international higher education.</p>
+          </article>
+          <article class="feature">
+            <h3>Student success mindset</h3>
+            <p class="muted">We don’t just educate— we empower learners to shape a better world.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="muted">Tell us what you need and we’ll respond with the right plan.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Zoho embed goes here -->
+          <div class="card contact-card">
+            <h3>Send a message</h3>
+            <p class="muted">
+              This form is powered by Zoho Forms. Submissions will be emailed to <strong>mario.butros@ischoola.com</strong>
+              once you enable email notifications inside Zoho Forms.
+            </p>
+
+            <!-- Replace the src with your Zoho Forms iframe link -->
+            <iframe
+              title="iSchoola Contact Form"
+              class="zoho-frame"
+              src="PASTE_YOUR_ZOHO_FORM_EMBED_URL_HERE"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <p class="muted small">
+              Tip: If the iframe height shows scrollbars, tell me your Zoho form length and I’ll tune the height precisely.
+            </p>
+          </div>
+
+          <aside class="card contact-aside">
+            <h3>Business Inquiries</h3>
+            <div class="info">
+              <div class="info-row">
+                <span class="label">Email</span>
+                <span class="value">mario.butros@ischoola.com</span>
+              </div>
+              <div class="info-row">
+                <span class="label">Coverage</span>
+                <span class="value">Egypt • Middle East</span>
+              </div>
+            </div>
+
+            <div class="mini-callout" role="note">
+              <strong>Next step:</strong>
+              If you want, we can add an Arabic version (EN/AR toggle), school subpages, and a news/resources library.
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2>About iSchoola</h2>
-        <p>
-          iSchoola is an education systems company that helps schools run better—from daily operations
-          to teaching quality, curriculum planning, and accreditation preparation.
-        </p>
-      </div>
-
-      <div class="cards-3">
-        <article class="card">
-          <h3>Mission</h3>
-          <p>Help schools deliver high-quality education through practical systems and accountable execution.</p>
-        </article>
-        <article class="card">
-          <h3>Vision</h3>
-          <p>Build a trusted network of schools that combine warmth, structure, and measurable outcomes.</p>
-        </article>
-        <article class="card">
-          <h3>Values</h3>
-          <p>Students first • Professionalism • Transparency • Continuous improvement • Community.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="section section-alt">
-    <div class="container">
-      <div class="section-head">
-        <h2>Services</h2>
-        <p>Everything you need to operate, improve, and scale a school—step by step.</p>
-      </div>
-
-      <div class="cards-3">
-        <article class="card">
-          <h3>School Operations</h3>
-          <p>Policies, procedures, job roles, dashboards, and performance tracking.</p>
-          <ul class="mini">
-            <li>Handbooks & SOPs</li>
-            <li>HR workflows</li>
-            <li>KPI reporting</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>Academics & Curriculum</h3>
-          <p>Year plans, pacing guides, SAT/ACT/EST readiness integration, learning resources.</p>
-          <ul class="mini">
-            <li>Scope & sequence</li>
-            <li>Assessment design</li>
-            <li>Resource development</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>Accreditation Readiness</h3>
-          <p>Evidence organization, self-study documentation, improvement planning, visit readiness.</p>
-          <ul class="mini">
-            <li>Document control</li>
-            <li>Evidence mapping</li>
-            <li>Mock reviews</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Schools -->
-  <section id="schools" class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2>Schools & Portfolio</h2>
-        <p>Showcase your schools here (cards). We’ll replace placeholders with real schools next.</p>
-      </div>
-
-      <div class="cards-3">
-        <article class="card school-card">
-          <h3>School Name (Placeholder)</h3>
-          <p class="muted">Location • Program (American / Bilingual)</p>
-          <p>Short highlight about student outcomes, culture, and school identity.</p>
-        </article>
-        <article class="card school-card">
-          <h3>School Name (Placeholder)</h3>
-          <p class="muted">Location • Program (American / Bilingual)</p>
-          <p>Short highlight about special programs, innovation, and learning support.</p>
-        </article>
-        <article class="card school-card">
-          <h3>School Name (Placeholder)</h3>
-          <p class="muted">Location • Program (American / Bilingual)</p>
-          <p>Short highlight about accreditation progress and growth strategy.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Resources -->
-  <section id="resources" class="section section-alt">
-    <div class="container">
-      <div class="section-head">
-        <h2>Resources</h2>
-        <p>Useful guides for school leaders, teachers, and parents (we can add downloads later).</p>
-      </div>
-
-      <div class="cards-2">
-        <article class="card">
-          <h3>Accreditation Readiness Checklist</h3>
-          <p>What evidence a school should organize before a visit.</p>
-          <a class="link" href="#contact">Request it →</a>
-        </article>
-        <article class="card">
-          <h3>School Operations Starter Pack</h3>
-          <p>Core policies and templates to professionalize daily operations.</p>
-          <a class="link" href="#contact">Request it →</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <p>Tell us what you need and we’ll respond with the right plan.</p>
-      </div>
-
-      <div class="contact-grid">
-        <form class="card form" onsubmit="return handleSubmit(event)">
-          <label>
-            Full Name
-            <input required name="name" placeholder="Your name" />
-          </label>
-
-          <label>
-            Email
-            <input required type="email" name="email" placeholder="name@domain.com" />
-          </label>
-
-          <label>
-            What are you interested in?
-            <select name="topic">
-              <option>School Operations</option>
-              <option>Academics & Curriculum</option>
-              <option>Accreditation Readiness</option>
-              <option>Quality Assurance & Training</option>
-              <option>Other</option>
-            </select>
-          </label>
-
-          <label>
-            Message
-            <textarea required name="message" rows="5" placeholder="Write your message..."></textarea>
-          </label>
-
-          <button class="btn" type="submit">Send</button>
-         
-        </form>
-
-        
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
+  <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="assets/logo.png" alt="iSchoola logo" class="logo small" />
+      <div class="footer-left">
+        <img src="assets/logo.png" alt="iSchoola logo" class="footer-logo" />
         <p class="muted small">© <span id="year"></span> iSchoola. All rights reserved.</p>
       </div>
 
-      <div class="footer-links">
+      <div class="footer-right">
         <a href="#about">About</a>
-        <a href="#services">Services</a>
+        <a href="#schools">Schools</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -274,4 +478,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
