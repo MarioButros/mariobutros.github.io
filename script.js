@@ -31,11 +31,15 @@ function setTheme(theme) {
   root.setAttribute("data-theme", theme);
   const isDark = theme === "dark";
   themeToggle?.setAttribute("aria-pressed", String(isDark));
-  localStorage.setItem("ischoola_theme", theme);
+  themeToggle?.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+  const icon = themeToggle?.querySelector(".icon");
+  if (icon) icon.textContent = isDark ? "☀" : "◐";
+  try { localStorage.setItem("ischoola_theme", theme); } catch { /* maintain current theme */ }
 }
 
 (function initTheme(){
-  const saved = localStorage.getItem("ischoola_theme");
+  let saved;
+  try { saved = localStorage.getItem("ischoola_theme"); } catch { /* use system preference */ }
   if (saved === "light" || saved === "dark") {
     setTheme(saved);
     return;
@@ -50,40 +54,38 @@ themeToggle?.addEventListener("click", () => {
   setTheme(current === "dark" ? "light" : "dark");
 });
 
-// Kinetic typography hero (accessible + respects reduced motion)
-const kineticWord = document.getElementById("kineticWord");
-const words = ["systems", "innovation", "career tracks", "quality", "technology", "confidence"];
-let wordIndex = 0;
+// Career pathway examples
+const recommendBtn = document.getElementById("recommendBtn");
+const box = document.getElementById("recommendationBox");
+const ideas = [
+  { title: "Engineering Track", text: "Pre-calculus + Physics + Robotics projects + SAT/ACT Math plan." },
+  { title: "Entrepreneurship Track", text: "Economics + Business planning + Digital marketing + pitch-day coaching." },
+  { title: "Computer Science Track", text: "Python + Web development + AI mini-projects + portfolio building." },
+  { title: "Design Track", text: "Digital design + UX projects + interdisciplinary showcases + university portfolio prep." },
+  { title: "Health Sciences Track", text: "Biology + lab skills + research writing + test strategy for science reasoning." }
+];
 
-const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+recommendBtn?.addEventListener("click", () => {
+  if (!box) return;
+  const pick = ideas[Math.floor(Math.random() * ideas.length)];
+  box.innerHTML = `<strong>Pathway idea: ${pick.title}</strong><br><span class="muted">${pick.text}</span>`;
+  box.focus();
+});
 
-function animateWordChange(next) {
-  if (!kineticWord) return;
-  if (reduceMotion) {
-    kineticWord.textContent = next;
-    return;
+// Close the mobile navigation on Escape or an outside click.
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && menu?.classList.contains("open")) {
+    menu.classList.remove("open");
+    toggleBtn.setAttribute("aria-expanded", "false");
+    toggleBtn.focus();
   }
-
-  // Lightweight "kinetic" effect: slide + blur (no heavy libs)
-  kineticWord.style.transition = "transform 220ms ease, filter 220ms ease, opacity 220ms ease";
-  kineticWord.style.transform = "translateY(-8px)";
-  kineticWord.style.filter = "blur(3px)";
-  kineticWord.style.opacity = "0.25";
-
-  setTimeout(() => {
-    kineticWord.textContent = next;
-    kineticWord.style.transform = "translateY(0)";
-    kineticWord.style.filter = "blur(0)";
-    kineticWord.style.opacity = "1";
-  }, 230);
-}
-
-if (kineticWord) {
-  setInterval(() => {
-    wordIndex = (wordIndex + 1) % words.length;
-    animateWordChange(words[wordIndex]);
-  }, 1900);
-}
+});
+document.addEventListener("click", event => {
+  if (menu?.classList.contains("open") && !event.target.closest(".nav")) {
+    menu.classList.remove("open");
+    toggleBtn.setAttribute("aria-expanded", "false");
+  }
+});
 
 // AI-ish micro module (shuffles short insights)
 const aiShuffle = document.getElementById("aiShuffle");
@@ -102,20 +104,3 @@ aiShuffle?.addEventListener("click", () => {
   if (strip) strip.textContent = "— " + aiInsights[aiIndex];
 });
 
-// “Generate pathway idea” demo
-const recommendBtn = document.getElementById("recommendBtn");
-const box = document.getElementById("recommendationBox");
-const ideas = [
-  { title: "Engineering Track", text: "Pre-calculus + Physics + Robotics projects + SAT/ACT Math plan." },
-  { title: "Entrepreneurship Track", text: "Economics + Business planning + Digital marketing + pitch-day coaching." },
-  { title: "Computer Science Track", text: "Python + Web development + AI mini-projects + portfolio building." },
-  { title: "Design Track", text: "Digital design + UX projects + interdisciplinary showcases + university portfolio prep." },
-  { title: "Health Sciences Track", text: "Biology + lab skills + research writing + test strategy for science reasoning." }
-];
-
-recommendBtn?.addEventListener("click", () => {
-  if (!box) return;
-  const pick = ideas[Math.floor(Math.random() * ideas.length)];
-  box.innerHTML = `<strong>Pathway idea: ${pick.title}</strong><br><span class="muted">${pick.text}</span>`;
-  box.focus();
-});

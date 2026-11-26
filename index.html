@@ -13,6 +13,9 @@
   <meta property="og:type" content="website" />
 
   <link rel="icon" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -52,24 +55,13 @@
   <main id="main">
     <!-- HERO -->
     <section id="home" class="hero" aria-label="Hero">
-      <div class="hero-bg" aria-hidden="true">
-        <div class="blob blob-a"></div>
-        <div class="blob blob-b"></div>
-        <div class="grid-sheen"></div>
-      </div>
-
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="pill">
-            <span class="pill-dot" aria-hidden="true"></span>
-            Innovative • Trustworthy • Student-Centered
-          </p>
+          <p class="eyebrow">Education for a changing world</p>
 
           <h1 class="hero-title">
             <span class="hero-title-static">Future-ready schools powered by</span>
-            <span class="kinetic" aria-live="polite">
-              <span class="kinetic-word" id="kineticWord">systems</span>
-            </span>
+            <span class="kinetic"><span class="kinetic-word">strong systems.</span></span>
           </h1>
 
           <p class="hero-lead">
@@ -97,41 +89,27 @@
             </div>
           </dl>
 
-          <div class="ai-strip" role="region" aria-label="AI personalization preview">
-            <div class="ai-badge">AI-Ready</div>
-            <div class="ai-copy">
-              <strong>Personalized learning signals</strong>
-              <span class="muted">— dynamic content areas hinting at adaptive pathways, diagnostics, and support.</span>
-            </div>
-            <button id="aiShuffle" class="link-btn" type="button">Shuffle insights</button>
-          </div>
         </div>
 
-        <!-- 3D floating subject icons -->
-        <aside class="hero-visual" aria-label="Highlights and subjects">
+        <!-- Education highlights -->
+        <aside class="hero-visual" aria-label="What iSchoola delivers">
+          <div class="hero-art" aria-label="Explore iSchoola">
+            <a class="art-shape art-school" href="#schools">Schools <span aria-hidden="true">↗</span></a>
+            <a class="art-shape art-tech" href="#model">Learning <span aria-hidden="true">↗</span></a>
+            <a class="art-shape art-quality" href="#initiatives">Innovation <span aria-hidden="true">↗</span></a>
+          </div>
           <div class="glass-card">
             <h2 class="card-title">What iSchoola delivers</h2>
             <ul class="check">
               <li>Academic excellence with real-world readiness</li>
               <li>Career-oriented high school tracks</li>
-              <li>SAT / ACT / EST preparation embedded in the journey</li>
+              <li>SAT / ACT / EST preparation</li>
               <li>Quality assurance and accreditation readiness</li>
-              <li>EdTech and data systems that scale</li>
+              <li>EdTech and scalable data systems</li>
             </ul>
-          </div>
-
-          <div class="float-stage" aria-hidden="true">
-            <div class="float-icon fi-1" title="STEM">∑</div>
-            <div class="float-icon fi-2" title="Coding">⌘</div>
-            <div class="float-icon fi-3" title="Design">✦</div>
-            <div class="float-icon fi-4" title="Business">◎</div>
           </div>
         </aside>
       </div>
-
-      <svg class="divider" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0,64 C160,110 320,10 480,48 C640,86 760,140 920,96 C1060,58 1120,14 1200,44 L1200,120 L0,120 Z"></path>
-      </svg>
     </section>
 
     <!-- ABOUT -->
@@ -206,10 +184,6 @@
           </div>
         </div>
       </div>
-
-      <svg class="divider divider-flip" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0,64 C160,110 320,10 480,48 C640,86 760,140 920,96 C1060,58 1120,14 1200,44 L1200,120 L0,120 Z"></path>
-      </svg>
     </section>
 
     <!-- ACADEMIC MODEL -->
@@ -272,11 +246,19 @@
           </article>
         </div>
 
+        <div class="ai-strip" role="region" aria-label="AI personalization preview">
+            <div class="ai-badge">AI-Ready</div>
+            <div class="ai-copy">
+              <strong>Personalized learning signals</strong>
+              <span class="muted">— diagnostics, targets and weekly growth plans.</span>
+            </div>
+            <button id="aiShuffle" class="link-btn" type="button">Shuffle insights</button>
+          </div>
         <div class="dynamic-area" role="region" aria-label="Dynamic personalization area">
           <div class="dynamic-left">
             <h3>Personalization Preview</h3>
-            <p class="muted">A glimpse of what an AI-enabled iSchoola experience can feel like.</p>
-            <button id="recommendBtn" class="btn btn-small" type="button">Generate pathway idea</button>
+            <p class="muted">Explore example career pathways for high school students.</p>
+            <button id="recommendBtn" class="btn btn-small" type="button">Explore pathway idea</button>
           </div>
           <div class="dynamic-right">
             <div class="recommendation" id="recommendationBox" tabindex="0" aria-live="polite">
@@ -326,10 +308,6 @@
           </article>
         </div>
       </div>
-
-      <svg class="divider" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0,64 C160,110 320,10 480,48 C640,86 760,140 920,96 C1060,58 1120,14 1200,44 L1200,120 L0,120 Z"></path>
-      </svg>
     </section>
 
     <!-- INFRASTRUCTURE -->
@@ -417,42 +395,17 @@
         </div>
 
         <div class="contact-grid">
-          <!-- Zoho embed goes here -->
           <div class="card contact-card">
-            <h3>Send a message</h3>
-            <p class="muted">
-               Submissions will be emailed to <strong>mario.butros@ischoola.com</strong>
-            
-            </p>
-
-            <!-- Replace the src with your Zoho Forms iframe link -->
-            <div class="card contact-card">
-  <h3>Send a message</h3>
-  <p class="muted">
-    Click the button below to send us your inquiry directly.
-  </p>
-
-  <a 
-    class="btn"
-    href="mailto:mario.butros@ischoola.com?subject=Inquiry from iSchoola Website&body=Hello iSchoola Team,%0D%0A%0D%0AI am interested in:%0D%0A%0D%0A%0D%0APlease contact me regarding:%0D%0A%0D%0A%0D%0ABest regards,"
-  >
-    Send Email
-  </a>
-
-  <p class="muted small" style="margin-top:12px;">
-    Or email us directly at 
-    <a href="mailto:mario.butros@ischoola.com">mario.butros@ischoola.com</a>
-  </p>
-</div>
-           
+            <h3>Let's work together</h3>
+            <p>Whether you are exploring school partnerships, academic programs or educational development, we would love to hear from you.</p>
+            <a class="btn" href="mailto:mario.butros@ischoola.com?subject=Inquiry%20from%20iSchoola%20Website">Send email <span aria-hidden="true">↗</span></a>
           </div>
- 
           <aside class="card contact-aside">
             <h3>Business Inquiries</h3>
             <div class="info">
               <div class="info-row">
                 <span class="label">Email</span>
-                <span class="value">mario.butros@ischoola.com</span>
+                <a class="value" href="mailto:mario.butros@ischoola.com">mario.butros@ischoola.com</a>
               </div>
               <div class="info-row">
                 <span class="label">Coverage</span>
@@ -460,10 +413,7 @@
               </div>
             </div>
 
-            <div class="mini-callout" role="note">
-              <strong> Do not Hesitate:</strong>
-              
-            </div>
+
 
           </aside>
         </div>
